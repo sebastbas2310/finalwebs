@@ -1,0 +1,24 @@
+<mat-card class="cardWithShadow">
+  <mat-card-content>
+    <div class="d-flex">
+      <div class="m-r-auto m-b-8">
+        <mat-card-title>Menú</mat-card-title>
+        <mat-card-subtitle>Listado de platos</mat-card-subtitle>
+      </div>
+    </div>
+    <hr>
+
+    <div class="card-container">
+      <div *ngFor="let poke of pokemonList" class="card">
+        <img [src]="poke.pokemon_img" alt="Imagen de {{ poke.pokemon_img }}" class="card-image">
+        <div class="card-info">
+          <h2>{{ poke.pokemon_name }}</h2>
+          <p>{{ poke.pokemon_id }}</p>
+        </div>
+        <div class="card-buttons">
+          <button class="btn btn-view-more" (click)="openPokemonDetails(poke)">Ver más</button>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
