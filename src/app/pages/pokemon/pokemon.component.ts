@@ -29,8 +29,7 @@ export class PokemonComponent {
       },
       error: (err) => {
         if (err.status === 403) {
-          localStorage.removeItem('AuthToken');
-          // this.router.navigate(['/login']); // O cualquier acción para manejar el logout
+          
         }
       }
     });
